@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  fsl-web:
+    image: simcore/services/dynamic/fsl-web:1.0.0
+    ports:
+      - "28080:28080"
+    environment:
+      - APP_HOSTNAME=fsl-app
+    volumes:
+      - ${PWD}/web/config/nginx.conf:/etc/nginx/templates/default.conf.template
+
+  fsl-app:
+    image: simcore/services/dynamic/fsl-app:1.0.0
+    ports:
+       - "5900:5900"
+    environment:
+      - DY_SIDECAR_PATH_INPUTS=/tmp/inputs
+      - DY_SIDECAR_PATH_OUTPUTS=/tmp/outputs
+    volumes:
+      - ${PWD}/validation/workspace:/home/scu/work/workspace
+      - ${PWD}/validation/inputs:/tmp/inputs
+      - ${PWD}/validation/outputs:/tmp/outputs
