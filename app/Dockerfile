@@ -56,7 +56,8 @@ FROM base AS production
 # Download and install fsl, get rid of source
 RUN wget --no-check-certificate https://fsl.fmrib.ox.ac.uk/fsldownloads/fslinstaller.py && \
     python3 fslinstaller.py -d /usr/local/fsl -q && \
-    rm -rf /usr/local/fsl/src
+    rm -rf /usr/local/fsl/src && \
+    rm -r /usr/local/fsl/fslpython/pkgs/*tar.bz2
 
 # Set up FSL paths
 ENV FSLDIR=/usr/local/fsl
