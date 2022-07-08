@@ -1,0 +1,5 @@
+services:
+  "fsl-web":
+    build:
+      context: ./web
+      dockerfile: Dockerfile

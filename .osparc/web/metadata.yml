@@ -1,0 +1,55 @@
+name: "FSL-web"
+thumbnail: https://fsl.fmrib.ox.ac.uk/fsl/wiki_static/fsl/img/fsl-logo-x2.png
+description: "FSL is a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data, created by the Analysis Group, FMRIB, Oxford, UK. See https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSL for more information"
+key: simcore/services/dynamic/fsl-web
+version: 1.0.0
+integration-version: 2.0.0
+type: dynamic
+authors:
+  - name: "Elisabetta Iavarone"
+    email: "iavarone@itis.swiss"
+    affiliation: "IT'IS Foundation"
+contact: "iavarone@itis.swiss"
+inputs:
+  input_1:
+    displayOrder: 1
+    label: Input files
+    description: Files downloaded from service connected at the input
+    type: data:*/*
+  input_2:
+    displayOrder: 2
+    label: More Input files
+    description: Files downloaded from service connected at the input
+    type: data:*/*
+  input_3:
+    displayOrder: 3
+    label: More Input files
+    description: Files downloaded from service connected at the input
+    type: data:*/*
+  input_4:
+    displayOrder: 4
+    label: More Input files
+    description: Files downloaded from service connected at the input
+    type: data:*/*
+
+outputs:
+  output_1:
+    displayOrder: 1
+    label: Output files
+    description: Files available for service connected to the output
+    type: data:*/*
+  output_2:
+    displayOrder: 2
+    label: More Output files
+    description: Files available for service connected to the output
+    type: data:*/*
+  output_3:
+    displayOrder: 3
+    label: More Output files
+    description: Files available for service connected to the output
+    type: data:*/*
+  output_4:
+    displayOrder: 4
+    label: More Output files
+    description: Files available for service connected to the output
+    type: data:*/*

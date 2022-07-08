@@ -1,0 +1,5 @@
+services:
+  "fsl-app":
+    build:
+      context: ./app
+      dockerfile: Dockerfile
