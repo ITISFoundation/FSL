@@ -41,7 +41,7 @@ run-local: ## runs images with local configuration
 
 .PHONY: shell-app up
 shell-app: ## enter app container
-	docker run -it --rm --entrypoint /bin/bash simcore/services/dynamic/${APP_NAME}:${DOCKER_IMAGE_TAG}
+	docker run -it --rm --entrypoint /bin/bash -v ${PWD}/validation:/home/scu/work/validation simcore/services/dynamic/${APP_NAME}:${DOCKER_IMAGE_TAG} 
 
 publish-local:  ## push to local throw away registry to test integration
 	@docker tag simcore/services/dynamic/${WEB_NAME}:${DOCKER_IMAGE_TAG} registry:5000/simcore/services/dynamic/${WEB_NAME}:${DOCKER_IMAGE_TAG}

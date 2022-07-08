@@ -62,7 +62,7 @@ RUN wget --no-check-certificate https://fsl.fmrib.ox.ac.uk/fsldownloads/fslinsta
 # Set up FSL paths
 ENV FSLDIR=/usr/local/fsl
 ENV PATH=$PATH:$FSLDIR/bin
-ENV LD_LIBRARY_PATH=$FSLDIR/lib:$FSLDIR/fslpython/lib
+ENV LD_LIBRARY_PATH=$FSLDIR/fslpython/envs/fslpython/lib/
 # Other variables can be sourced from $FSLDIR/etc/fslconf/fsl.sh 
 ENV FSLWISH=$FSLDIR/bin/fslwish 
 ENV FSLOUTPUTTYPE=NIFTI_GZ
