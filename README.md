@@ -36,4 +36,4 @@ In a local deployment, you should be able to use the FSL GUI. You can try out di
 - To update service version use one of the commands ``make version-*``
 
 ## CI/CD Integration
-A template ci config file is created in```fsl/.github/workflows/check-image.yml```.
+A template ci config file is created in```fsl/.github/workflows/check-image.yml```. Then CI are monitored by the publisher repo on GitLab that takes care of publishing a new version.
