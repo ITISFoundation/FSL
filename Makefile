@@ -13,7 +13,7 @@ define _bumpversion
 	# upgrades as $(subst $(1),,$@) version, commits and tags
 	@docker run -it --rm -v $(PWD):/fsl \
 		-u $(shell id -u):$(shell id -g) \
-		itisfoundation/ci-service-integration-library:v1.0.1-dev-32 \
+		itisfoundation/ci-service-integration-library:v2.0.9-dev \
 		sh -c "cd /fsl && bump2version --verbose --list --config-file $(1) $(subst $(2),,$@)"
 endef
 
@@ -28,16 +28,16 @@ version-patch version-minor version-major: .bumpversion.cfg ## increases service
 compose-spec: ## runs ooil to assemble the docker-compose.yml file
 	@docker run -it --rm -v $(PWD):/fsl \
 		-u $(shell id -u):$(shell id -g) \
-		itisfoundation/ci-service-integration-library:v1.0.1-dev-32 \
+		itisfoundation/ci-service-integration-library:v2.0.9-dev \
 		sh -c "cd /fsl && ooil compose"
 
 .PHONY: build
 build: compose-spec ## build docker images
-	docker-compose build
+	docker compose build
 
 .PHONY: run-local
 run-local: ## runs images with local configuration
-	docker-compose --file docker-compose-local.yml up
+	docker compose --file docker-compose-local.yml up
 
 .PHONY: shell-app up
 shell-app: ## enter app container
