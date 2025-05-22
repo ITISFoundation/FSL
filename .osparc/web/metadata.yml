@@ -2,7 +2,6 @@ name: "FSL-web"
 description: https://raw.githubusercontent.com/ZurichMedTech/s4l-assets/refs/heads/main/app/full/services/simcore_services_dynamic_fsl-web.md
 icon: https://raw.githubusercontent.com/ZurichMedTech/s4l-assets/main/app/icons/s4l/simcore_services_dynamic_fsl-web.png
 thumbnail: https://raw.githubusercontent.com/ZurichMedTech/s4l-assets/main/app/thumbnails/s4l/simcore_services_dynamic_fsl-web.png
-description_ui: true
 key: simcore/services/dynamic/fsl-web
 version: 1.0.1
 integration-version: 2.0.0
